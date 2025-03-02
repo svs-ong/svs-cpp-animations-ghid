@@ -13,15 +13,6 @@ void clear_terminal() {
     #endif
 }
 
-void displayMatrix(char** matrix , int width , int height)
-{
-    for(int i = 0 ; i < width ; i ++)
-        for(int j = 0 ; j < height ; j ++)
-        {
-            std :: cout << *(*(matrix+i) + j);
-        }
-}
-
 void sleep_ms(int seconds)
 {
 std:this_thread::sleep_for(chrono::milliseconds(sleepTime));
