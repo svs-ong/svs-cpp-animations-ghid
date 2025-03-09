@@ -1,4 +1,4 @@
-🌟 **🌟 Cum funcționează animația din `Animation_Functions.cpp` - Ghid Pas cu Pas**  🌟
+# 🌟  **Cum funcționează animația din `Animation_Functions.cpp` - Ghid Pas cu Pas**  🌟
 
 În acest ghid, îți voi explica pas cu pas cum funcționează animația din codul `Animation_Functions.cpp`, folosind emojiuri și exemple clare. 🕹️🎬
 Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https://www.onlinegdb.com/online_c++_compiler)  pentru a-l rula!
@@ -7,7 +7,7 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 1: Curățarea Ecranului 🧹** 
+## **Pasul 1: Curățarea Ecranului 🧹** 
  
 - **Ce se întâmplă?**  Programul începe prin **ștergerea ecranului**  pentru a crea iluzia unei animații curate și continue.
  
@@ -20,7 +20,7 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 2: Pauza între Cadre ⏳** 
+## **Pasul 2: Pauza între Cadre ⏳** 
  
 - **Ce se întâmplă?**  Programul face o pauză de **50 milisecunde**  între fiecare pas al animației.
  
@@ -33,7 +33,7 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 3: Construirea Animației 🔄** 
+## **Pasul 3: Construirea Animației 🔄** 
  
 - **Ce se întâmplă?**  Programul afișează pe rând simboluri pe ecran, care se schimbă după fiecare pauză, creând un efect de mișcare.
  
@@ -46,7 +46,7 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 4: Animația Continuă 🔁** 
+## **Pasul 4: Animația Continuă 🔁** 
  
 - **Ce se întâmplă?**  Bucla `while(true)` din `main()` face ca animația să ruleze **la nesfârșit** .
  
@@ -59,7 +59,7 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 5: Iluzia de Mișcare 🌀** 
+## **Pasul 5: Iluzia de Mișcare 🌀** 
  
 - **Cum se creează animația?**  Fiecare cadru durează 50 de milisecunde, iar ecranul este șters și înlocuit rapid cu următorul cadru. Aceste schimbări rapide dau impresia unei mișcări continue.
  
@@ -68,8 +68,13 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 
 
 ---
+<br />
+<br />
+<br />
 
-🌟 **Cum funcționează animația din `Hot_Air_Baloon.cpp` - Pas cu Pas**  🌟
+
+
+# 🌟 **Cum funcționează animația din `Hot_Air_Baloon.cpp` - Pas cu Pas**  🌟
 
 În acest ghid, îți voi explica cum funcționează animația într-un mod concis și ușor de înțeles. 🕹️🎬
 
@@ -78,7 +83,7 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 1: Curățarea Ecranului 🧹** 
+## **Pasul 1: Curățarea Ecranului 🧹** 
  
 - **Ce se întâmplă?**  Curăță ecranul terminalului înainte de fiecare cadru nou.
  
@@ -89,7 +94,7 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 2: Adăugarea unui Delay ⏳** 
+## **Pasul 2: Adăugarea unui Delay ⏳** 
  
 - **Ce se întâmplă?**  Se adaugă o pauză de 150ms între fiecare cadru.
  
@@ -100,7 +105,7 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 3: Afișarea Animației 🔄** 
+## **Pasul 3: Afișarea Animației 🔄** 
  
 - **Ce se întâmplă?**  Se afișează figura (`______`, `/ \`, etc.) cu spații deasupra și dedesubt pentru a o muta.
  
@@ -111,10 +116,112 @@ Dacă vrei să testezi codul pe loc, poți folosi acest [compiler online](https:
 ---
 
 
-**Pasul 4: Bucla Infinită 🔁** 
+## **Pasul 4: Bucla Infinită 🔁** 
  
 - **Ce se întâmplă?**  `while (true)` menține animația în execuție continuu.
  
 - **Cum?**  Se rulează continuu funcția `loop()` pentru a repeta animația. 🔄
 
 
+
+---
+<br />
+<br />
+<br />
+
+
+
+# 🌟  **Cum funcționează animația din `Stickman.cpp` - Ghid Pas cu Pas 🎬🏃‍♂️**  🌟 
+
+
+## 1️⃣ Introducere 
+
+Acest program creează o animație simplă cu un **stick man**  care aleargă pe ecran! 🏃‍♂️💨 Funcționează prin afișarea mai multor cadre unul după altul, ceea ce creează iluzia de mișcare.
+Pentru a rula codul, folosește acest compilator online: [OnlineGDB](https://www.onlinegdb.com/online_c++_compiler) .
+
+
+---
+
+
+
+## 2️⃣ Cum funcționează? 🤔 
+
+
+Programul urmează acești pași:
+
+ 
+2. **Desenează un cadru**  🎨 – Un stick man este afișat într-o anumită poziție.
+ 
+4. **Așteaptă puțin**  ⏳ – Programul pune o pauză scurtă pentru a face animația mai fluidă.
+ 
+6. **Șterge ecranul**  🧹 – Elimină cadrul anterior pentru a pregăti următorul.
+ 
+8. **Afișează următorul cadru**  ➡️ – Stick man-ul apare puțin mai la dreapta.
+ 
+10. **Repetă procesul**  🔄 – Se creează efectul de alergare!
+
+
+
+---
+
+
+
+## 3️⃣ Explicația codului 📝 
+
+
+### 🖥️ Funcții importante 
+
+🔹 `clear_terminal()` – Șterge ecranul pentru a face loc următorului cadru.
+
+🔹 `sleep_ms(int seconds)` – Pune o pauză înainte de a trece la următorul cadru.
+
+🔹 `frame1(), frame2(), ... frame7()` – Funcții care desenează fiecare cadru al animației.
+
+🔹 `loop()` – Afișează toate cadrele pe rând pentru a crea mișcarea.
+
+🔹 `main()` – Rulează animația în **buclă infinită**  🔁.
+
+
+---
+
+
+
+## 4️⃣ Ce face fiecare cadru? 🎭 
+
+📌 **Frame 1:**  Stick man-ul stă în stânga.
+
+📌 **Frame 2:**  Se mișcă puțin la dreapta.
+
+📌 **Frame 3:**  Continuă să alerge înainte.
+
+📌 **Frame 4:**  Aproape ajunge la capătul ecranului.
+
+📌 **Frame 5:**  Se pregătește să termine cursa.
+
+📌 **Frame 6:**  Ajunge la final!
+
+📌 **Frame 7:**  Ridică mâinile în aer ca un campion! 🏆
+
+
+---
+
+
+
+## 5️⃣ Ce poți încerca? 🤓 
+
+🎨 **Modifică animația**  – Poți schimba pozițiile stick man-ului pentru un alt efect!
+
+⏳ **Joacă-te cu viteza**  – Modifică valoarea lui `sleepTime` pentru a face animația mai lentă sau mai rapidă.
+
+🔁 **Fă animația mai lungă**  – Adaugă mai multe cadre pentru o alergare mai detaliată.
+
+
+---
+
+
+
+## 6️⃣ Concluzie 🚀 
+
+Acest program simplu folosește **afișarea de cadre, ștergerea ecranului și pauze scurte**  pentru a crea o iluzie de mișcare. Este un exemplu distractiv pentru a învăța despre **buclă, funcții și manipularea terminalului** ! 🖥️✨
+
+Distrează-te experimentând cu animația! 🎉
