@@ -1,6 +1,8 @@
 # 🌟  **Cum funcționează animația din `Animation_Functions.cpp` - Ghid Pas cu Pas**  🌟
 
 În acest ghid, îți voi explica pas cu pas cum funcționează animația din codul `Animation_Functions.cpp`.
+<br> <br>
+<img src="https://github.com/svs-ong/SVS-Animation-Library/blob/main/GifMaker_20250309213125561.gif" width="10%" height="10%"/>
 
 ## **Pasul 0: Testarea Codului ✅** 
 
