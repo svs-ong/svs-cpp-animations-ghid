@@ -150,15 +150,15 @@ Pentru a rula codul, folosește acest compilator online: [OnlineGDB](https://www
 Programul urmează acești pași:
 
  
-2. **Desenează un cadru**  🎨 – Un stick man este afișat într-o anumită poziție.
+1. **Desenează un cadru**  🎨 – Un stick man este afișat într-o anumită poziție.
  
-4. **Așteaptă puțin**  ⏳ – Programul pune o pauză scurtă pentru a face animația mai fluidă.
+2. **Așteaptă puțin**  ⏳ – Programul pune o pauză scurtă pentru a face animația mai fluidă.
  
-6. **Șterge ecranul**  🧹 – Elimină cadrul anterior pentru a pregăti următorul.
+3. **Șterge ecranul**  🧹 – Elimină cadrul anterior pentru a pregăti următorul.
  
-8. **Afișează următorul cadru**  ➡️ – Stick man-ul apare puțin mai la dreapta.
+4. **Afișează următorul cadru**  ➡️ – Stick man-ul apare puțin mai la dreapta.
  
-10. **Repetă procesul**  🔄 – Se creează efectul de alergare!
+5. **Repetă procesul**  🔄 – Se creează efectul de alergare!
 
 
 
