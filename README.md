@@ -1,79 +1,205 @@
-# 🌟  **Cum funcționează animația din `Animation_Functions.cpp` - Ghid Pas cu Pas**  🌟
+# 🌟  **Ghid animații în C++**  🌟
 
-În acest ghid, îți voi explica pas cu pas cum funcționează animația din codul `Animation_Functions.cpp`.
+În acest ghid, îți voi explica pas cu pas cum funcționează animația din codul `Startup_Code.cpp`.
 <br> <br>
-<img src="https://github.com/svs-ong/SVS-Animation-Library/blob/main/GifMaker_20250309213125561.gif" width="10%" height="10%"/>
+<img src="Animation.gif" width="10%" height="10%"/>
 
-## **Pasul 0: Testarea Codului ✅** 
+## ✅ **Pasul 0: Testarea Codului**
 
-Pentru a începe, copiază codul din fișierul `Animation_Functions.cpp` și rulează-l în [compilatorul online](https://www.onlinegdb.com/online_c++_compiler) . Astfel, vei putea testa animația direct în browser! 🖥️✨
+Copiază codul din `Startup_Code.cpp` și rulează-l aici:  
+👉 [Compilator Online C++](https://www.onlinegdb.com/online_c++_compiler)
 
-
----
-
-
-## **Pasul 1: Curățarea Ecranului 🧹** 
- 
-- **Ce se întâmplă?**  Programul începe prin **ștergerea ecranului**  pentru a crea iluzia unei animații curate și continue.
- 
-- **Cum funcționează?**  Dacă ești pe **Windows** , folosește comanda `cls`, iar pe alte sisteme (Linux/macOS), folosește `clear`. Aceasta este esențială pentru a nu lăsa elemente vechi pe ecran și a face animația să pară netedă. 🧼🖥️
- 
-- **De ce este important?**  Fără această curățare, animatia ar avea mai multe imagini suprapuse și ar deveni dificil de urmărit. 🧹
+🔍 Vezi cum liniile se mișcă una câte una. Magie simplă! ✨
 
 
+# 🧠 **Pasul 1: Înțelegerea Codului**
 
----
+### 🔸 Ce face acest cod?
 
+Creează o **animație simplă** în linie, unde un „-” se plimbă de la stânga la dreapta și înapoi.  
+E ca o bară de încărcare în slow-motion.
 
-## **Pasul 2: Pauza între Cadre ⏳** 
- 
-- **Ce se întâmplă?**  Programul face o pauză de **50 milisecunde**  între fiecare pas al animației.
- 
-- **Cum funcționează?**  Folosind funcția `std::this_thread::sleep_for(chrono::milliseconds(sleepTime));`, programul așteaptă 50 milisecunde între fiecare cadru pentru a face mișcarea vizibilă și fluidă. 😴⏰
- 
-- **De ce este important?**  Fără acest delay, animația s-ar mișca mult prea rapid și nu ai putea observa pașii ei. 🕰️💤
+* * *
 
+### 🔹 `clear_terminal()`
 
+```cpp
+void clear_terminal() {
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
+}
+```
 
----
+🧼 Curăță tot ce e pe ecran.  
+Fără ea, animația ar apărea pe linii noi una sub alta și ar arăta urât.  
+Funcționează atât pe Windows, cât și pe Linux/Mac.
 
+* * *
 
-## **Pasul 3: Construirea Animației 🔄** 
- 
-- **Ce se întâmplă?**  Programul afișează pe rând simboluri pe ecran, care se schimbă după fiecare pauză, creând un efect de mișcare.
- 
-- **Cum funcționează?**  De exemplu, se afișează simbolul `"-"`, apoi `"--"`, și tot așa, până când animatia se dezvoltă complet. Fiecare pas este urmat de o pauză, iar ecranul este curățat, pentru a face loc pentru următorul simbol. 🔁🎨
- 
-- **De ce este important?**  Aceasta este baza animației, pentru că fiecare cadru al animației este schimbat rapid pentru a da impresia unei mișcări fluide. 📽️✨
+### 🔹 `sleep_ms(int milliseconds)`
 
+```cpp
+void sleep_ms(int milliseconds) {
+    this_thread::sleep_for(chrono::milliseconds(milliseconds));
+}
+```
 
+⏳ Pune o pauză între cadre.  
+Așteaptă cât îi zici tu (în milisecunde).  
+În cod, e folosit cu `50`, adică o așteptare de 0.05 secunde.
 
----
+* * *
 
+### 🔹 `loop()`
 
-## **Pasul 4: Animația Continuă 🔁** 
- 
-- **Ce se întâmplă?**  Bucla `while(true)` din `main()` face ca animația să ruleze **la nesfârșit** .
- 
-- **Cum funcționează?**  Bucla infinită permite ca secvența de animație să se repete continuu, dând impresia că animația nu se oprește niciodată. 🎠🔄
- 
-- **De ce este important?**  Fără această buclă, animația s-ar opri după un singur ciclu. Bucla infinită asigură că animația continuă mereu. 🎢
+```cpp
+void loop() {
+    cout << "-    " << endl;
+    sleep_ms(50);
+    clear_terminal();
 
+    cout << "--   " << endl;
+    sleep_ms(50);
+    clear_terminal();
 
+    cout << " --  " << endl;
+    sleep_ms(50);
+    clear_terminal();
 
----
+    cout << "  -- " << endl;
+    sleep_ms(50);
+    clear_terminal();
 
+    cout << "   --" << endl;
+    sleep_ms(50);
+    clear_terminal();
 
-## **Pasul 5: Iluzia de Mișcare 🌀** 
- 
-- **Cum se creează animația?**  Fiecare cadru durează 50 de milisecunde, iar ecranul este șters și înlocuit rapid cu următorul cadru. Aceste schimbări rapide dau impresia unei mișcări continue.
- 
-- **De ce funcționează?**  Creăm iluzia de **mișcare continuă**  prin schimbarea rapidă a cadrelor și curățarea ecranului. Este ca și cum ai pune mai multe imagini în succesiune rapidă pentru a forma un film! 🎞️✨
+    cout << "    -" << endl;
+    sleep_ms(50);
+    clear_terminal();
+}
+```
 
+🔁 Desenează fiecare **cadru** al animației:
 
+* `"- "` → `"-- "` → `" -- "` → ... → `" -"`
+    
 
----
-<br />
-<br />
-<br />
+Fiecare linie e afișată, apoi se face pauză, apoi se curăță ecranul.  
+Așa pare că simbolul „-” **se mișcă** spre dreapta.
 
+* * *
+
+### 🔹 `main()`
+
+```cpp
+int main() {
+    while (true) {
+        loop();
+    }
+    return 0;
+}
+```
+
+🔄 Rulează `loop()` **la nesfârșit**.  
+Animația se repetă mereu, ca un GIF care nu se oprește.
+
+## 🎬 **Pasul 2: Rulează alte animații!**
+
+Acum că știi cum funcționează codul de bază, e timpul să încerci ceva mai avansat!
+
+### 🔸 1. `Hot_Air_Baloo.cpp` 🎈
+
+Animație cu un balon cu aer cald care se ridică.
+
+👣 Ce trebuie să faci:
+
+* Deschide fișierul `Hot_Air_Baloo.cpp`
+    
+* Rulează-l în același compilator online
+    
+* Observă cum se mișcă balonul pas cu pas!
+    
+
+* * *
+
+### 🔸 2. `Stickman.cpp` 🕴️
+
+Animație cu un omuleț care merge.
+
+👣 Pași:
+
+* Deschide fișierul `Stickman.cpp`
+    
+* Rulează-l!
+    
+* Omulețul se animă în pași simpli, ca o caricatură în mișcare.
+    
+## ✏️ **Pasul 3: Creează-ți propria animație!**
+
+Acum e rândul tău! 🎉
+
+### 🔹 Ce ai de făcut:
+
+1. Creează mai multe **cadre** folosind `cout`
+    
+2. Între ele, folosește:
+    
+    * `sleep_ms(...)` pentru pauză
+        
+    * `clear_terminal()` pentru curățare
+        
+3. Pune-le într-o funcție `loop()` care se repetă
+    
+
+### 🔸 Exemplu simplu:
+
+```cpp
+void frame1()
+{
+    cout<<"/";
+    cout<<"\n";
+}
+
+void frame2()
+{
+    cout<<"|";
+    cout<<"\n";
+}
+
+void frame3()
+{
+    // "\" in plus este adaugata pentru a putea afisa backslash
+    cout<<"\\";
+    cout<<"\n";
+}
+
+void my_animation() {
+    frame1();
+    sleep_ms(200);
+    clear_terminal();
+
+    frame2();
+    sleep_ms(200);
+    clear_terminal();
+
+    frame3();
+    sleep_ms(200);
+    clear_terminal();
+
+    frame2();
+    sleep_ms(200);
+    clear_terminal();
+}
+```
+
+### 🔁 Apoi în `main()`:
+
+```cpp
+while (true) {
+    my_animation();
+}
+```

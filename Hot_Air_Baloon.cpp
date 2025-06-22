@@ -6,18 +6,17 @@ using namespace std;
 
 const int sleepTime = 150;
 
-// Function to clear the terminal screen based on the OS
 void clear_terminal() {
     #ifdef _WIN32
-        system("cls"); // Windows clear
+        system("cls"); 
     #else
-        system("clear"); // UNIX-based clear
+        system("clear");
     #endif
 }
 
 void sleep_ms(int milliseconds)  
 {
-    std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds)); 
+    this_thread::sleep_for(chrono::milliseconds(milliseconds)); 
 }
 
 void loop() {
